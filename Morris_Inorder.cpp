@@ -9,17 +9,6 @@ struct node
 };
 
 
-node *stack[100];
-int top=-1;
-
-void push(node *n)
-{
-    top++;
-    stack[top]=n;
-}
-
-node *pop() { return stack[top--]; }
-
 node *inorder_predecessor(node *root)
 {
     node *cur  = root->left;
